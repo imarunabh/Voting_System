@@ -1,0 +1,35 @@
+<div class="form-container">
+   <form [formGroup]="addVoterForm">
+     <h2>Add Voter</h2>
+ 
+     <label for="email">Email</label>
+     <input type="text" placeholder="Enter Email" formControlName="email">
+ 
+     <label for="password">Password</label>
+     <input type="password" placeholder="Enter password" formControlName="password">
+ 
+     <label for="firstName">First Name</label>
+     <input type="text" placeholder="Enter firstName" formControlName="firstName">
+ 
+     <label for="middleName">Middle Name</label>
+     <input type="text" placeholder="Enter middleName" formControlName="middleName">
+ 
+     <label for="lastName">Last Name</label>
+     <input type="text" placeholder="Enter lastName" formControlName="lastName">
+ 
+     <label for="dob">Date of Birth</label>
+     <input type="date" placeholder="Enter Date of Birth" formControlName="dob">
+ 
+     <label for="aadharCard">Aadhar Card</label>
+     <input type="text" placeholder="Enter Aadhar Card" formControlName="aadharCard">
+ 
+     <label for="voterCardNumber">Voter Card Number</label>
+     <input type="text" placeholder="Enter voterCardNumber" formControlName="voterCardNumber">
+ 
+     <label for="contactNumber">Contact Number</label>
+     <input type="text" placeholder="Enter contactNumber" formControlName="contactNumber">
+ 
+     <button type="button" (click)="addVoter()">Add Voter</button>
+   </form>
+ </div>
+ 

@@ -1,0 +1,45 @@
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .party-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .party-table th,
+  .party-table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .party-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .party-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    padding: 6px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+.message_box{
+  position: absolute;
+  top:5vh;
+  left:20vw;
+
+}  

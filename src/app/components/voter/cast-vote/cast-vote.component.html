@@ -1,0 +1,30 @@
+<app-message-box *ngIf="showMessage" [value]="message" class="message_box"></app-message-box>
+<div class="container">
+    <h2>🗳️ Available Parties</h2>
+  
+    <table *ngIf="party && party.length > 0; else noParties" class="party-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Party Name</th>
+          <th>Candidate Name</th>
+          <th>Party ID</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of party; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ p.partyName }}</td>
+          <td>{{ p.candidateName }}</td>
+          <td>{{ p.id }}</td>
+          <td><button (click)="castVote(p.id)">Cast Vote</button></td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noParties>
+      <p>No parties available to vote for.</p>
+    </ng-template>
+  </div>
+  

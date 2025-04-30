@@ -1,0 +1,34 @@
+<div class="dashboard-container">
+    <h2>🗳️ Party Dashboard</h2>
+  
+    <table *ngIf="parties && parties.length > 0; else noParties" class="party-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Party Image</th>
+          <th>Party Name</th>
+          <th>Candidate Name</th>
+          <th>Candidate Image</th>
+          <th>Party ID</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let party of parties; index as i">
+          <td>{{ i + 1 }}</td>
+          <td><img [src]="party.partySymbol" alt="{{party.partyName}}" class="party-img"></td>
+          <td>{{ party.partyName }}</td>
+          <td>{{ party.candidateName }}</td>
+          <td><img [src]="party.candidateImage" alt="{{party.partyName}}" class="party-img"></td>
+         
+          <td>{{ party.id }}</td>
+          <td>{{ party.votes != null ? party.votes : 0 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noParties>
+      <p>No party data available.</p>
+    </ng-template>
+  </div>
+  

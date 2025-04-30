@@ -1,0 +1,15 @@
+<form [formGroup]="partyForm" (ngSubmit)="addParty()" enctype="multipart/form-data">
+  <label for="partyName">Party Name:</label>
+  <input id="partyName" type="text" formControlName="partyName" />
+
+  <label for="candidateName">Candidate Name:</label>
+  <input id="candidateName" type="text" formControlName="candidateName" />
+
+  <label for="candidateImage">Candidate Image:</label>
+  <input id="candidateImage" type="file" (change)="onCandidateImageSelected($event)" />
+
+  <label for="partySymbol">Party Symbol:</label>
+  <input id="partySymbol" type="file" (change)="onPartySymbolSelected($event)" />
+
+  <button type="submit">Submit</button>
+</form>
